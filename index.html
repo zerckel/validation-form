@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="app">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Adresse e-mail</label>
+                <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small v-if="check == false" id="emailHelp" class="form-text text-muted">{{errorMail}}</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Mot De Passe</label>
+                <input v-model="mdp" type="password" class="form-control" id="exampleInputPassword1">
+                <small v-if="check == false" id="mdpHelp" class="form-text text-muted red">{{errorMdp}}</small>
+            </div>
+            <button v-on:click="submit" type="button" class="btn btn-primary">Inscription</button>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js.js" rel="script"></script>
+</html>
